@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <title>Кексобукинг</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
@@ -24,83 +25,93 @@
 
       <!-- Фильтрация объявлений -->
       <div class="map__filters-container">
-        <form action="#" class="map__filters" autocomplete="off">
-          <select name="housing-type" id="housing-type" class="map__filter">
-            <option value="any" selected>Любой тип жилья</option>
-            <option value="palace">Дворец</option>
-            <option value="flat">Квартира</option>
-            <option value="house">Дом</option>
-            <option value="bungalow">Бунгало</option>
-          </select>
-          <select name="housing-price" id="housing-price" class="map__filter">
-            <option value="any" selected>Любая</option>
-            <option value="middle">10000 - 50000&#x20bd;</option>
-            <option value="low">до 10000&#x20bd;</option>
-            <option value="high">от 50000&#x20bd;</option>
-          </select>
-          <select name="housing-rooms" id="housing-rooms" class="map__filter">
-            <option value="any" selected>Любое число комнат</option>
-            <option value="1">Одна комната</option>
-            <option value="2">Две комнаты</option>
-            <option value="3">Три комнаты</option>
-          </select>
-          <select name="housing-guests" id="housing-guests" class="map__filter">
-            <option value="any" selected>Любое число гостей</option>
-            <option value="2">Два гостя</option>
-            <option value="1">Один гость</option>
-            <option value="0">Не для гостей</option>
-          </select>
-          <fieldset id="housing-features" class="map__features">
-            <input type="checkbox" name="features" value="wifi" id="filter-wifi" class="map__checkbox visually-hidden">
-            <label class="map__feature map__feature--wifi" for="filter-wifi">Wi-Fi</label>
-            <input type="checkbox" name="features" value="dishwasher" id="filter-dishwasher"
-              class="map__checkbox visually-hidden">
-            <label class="map__feature map__feature--dishwasher" for="filter-dishwasher">Посудомоечная машина</label>
-            <input type="checkbox" name="features" value="parking" id="filter-parking"
-              class="map__checkbox visually-hidden">
-            <label class="map__feature map__feature--parking" for="filter-parking">Парковка</label>
-            <input type="checkbox" name="features" value="washer" id="filter-washer"
-              class="map__checkbox visually-hidden">
-            <label class="map__feature map__feature--washer" for="filter-washer">Стиральная машина</label>
-            <input type="checkbox" name="features" value="elevator" id="filter-elevator"
-              class="map__checkbox visually-hidden">
-            <label class="map__feature map__feature--elevator" for="filter-elevator">Лифт</label>
-            <input type="checkbox" name="features" value="conditioner" id="filter-conditioner"
-              class="map__checkbox visually-hidden">
-            <label class="map__feature map__feature--conditioner" for="filter-conditioner">Кондиционер</label>
-          </fieldset>
-        </form>
+        <div class="container">
+          <form action="#" class="map__filters" autocomplete="off">
+            <select name="housing-type" id="housing-type" class="map__filter map__item">
+              <option value="any" selected>Любой тип жилья</option>
+              <option value="palace">Дворец</option>
+              <option value="flat">Квартира</option>
+              <option value="house">Дом</option>
+              <option value="bungalow">Бунгало</option>
+            </select>
+            <select name="housing-price" id="housing-price" class="map__filter map__item">
+              <option value="any" selected>Любая</option>
+              <option value="middle">10000 - 50000&#x20bd;</option>
+              <option value="low">до 10000&#x20bd;</option>
+              <option value="high">от 50000&#x20bd;</option>
+            </select>
+            <select name="housing-rooms" id="housing-rooms" class="map__filter map__item">
+              <option value="any" selected>Любое число комнат</option>
+              <option value="1">Одна комната</option>
+              <option value="2">Две комнаты</option>
+              <option value="3">Три комнаты</option>
+            </select>
+            <select name="housing-guests" id="housing-guests" class="map__filter map__item">
+              <option value="any" selected>Любое число гостей</option>
+              <option value="2">Два гостя</option>
+              <option value="1">Один гость</option>
+              <option value="0">Не для гостей</option>
+            </select>
+            <fieldset id="housing-features" class="map__features map__item">
+              <input type="checkbox" name="features" value="wifi" id="filter-wifi"
+                class="map__checkbox visually-hidden">
+              <label class="map__feature map__feature--wifi" for="filter-wifi">Wi-Fi</label>
+              <input type="checkbox" name="features" value="dishwasher" id="filter-dishwasher"
+                class="map__checkbox visually-hidden">
+              <label class="map__feature map__feature--dishwasher" for="filter-dishwasher">Посудомоечная машина</label>
+              <input type="checkbox" name="features" value="parking" id="filter-parking"
+                class="map__checkbox visually-hidden">
+              <label class="map__feature map__feature--parking" for="filter-parking">Парковка</label>
+              <input type="checkbox" name="features" value="washer" id="filter-washer"
+                class="map__checkbox visually-hidden">
+              <label class="map__feature map__feature--washer" for="filter-washer">Стиральная машина</label>
+              <input type="checkbox" name="features" value="elevator" id="filter-elevator"
+                class="map__checkbox visually-hidden">
+              <label class="map__feature map__feature--elevator" for="filter-elevator">Лифт</label>
+              <input type="checkbox" name="features" value="conditioner" id="filter-conditioner"
+                class="map__checkbox visually-hidden">
+              <label class="map__feature map__feature--conditioner" for="filter-conditioner">Кондиционер</label>
+            </fieldset>
+          </form>
+        </div>
       </div>
     </section>
 
     <!-- Форма объявления -->
     <section class="notice">
-      <h2 class="notice__title">Ваше объявление</h2>
-      <form class="ad-form" method="post" action="https://23.javascript.pages.academy/keksobooking" enctype="multipart/form-data" autocomplete="off">
-        <fieldset class="ad-form-header">
-          <legend class="ad-form-header__title">Ваша фотография (для карты)</legend>
-          <div class="ad-form-header__upload">
-            <div class="ad-form-header__preview">
-              <img src="img/muffin-grey.svg" alt="Аватар пользователя" width="40" height="44">
+      <div class="container notice__container">
+        <h2 class="notice__title">Ваше объявление</h2>
+        <form class="ad-form" method="post" action="https://23.javascript.pages.academy/keksobooking"
+          enctype="multipart/form-data" autocomplete="off">
+          <fieldset class="ad-form-header">
+            <legend class="ad-form-header__title">Ваша фотография (для карты)</legend>
+            <div class="ad-form-header__upload">
+              <div class="ad-form-header__form">
+                <div class="ad-form-header__preview">
+                  <img src="img/muffin-grey.svg" alt="Аватар пользователя" width="40" height="44">
+                </div>
+                <div class="ad-form__field">
+                  <input type="file" id="avatar" name="avatar" class="ad-form-header__input visually-hidden"
+                    accept="image/png, image/jpeg">
+                  <label class="ad-form-header__drop-zone" for="avatar">Загрузить<br>фото...</label>
+                </div>
+              </div>
+              <p class="ad-form-header__info">Заполните все обязательные поля, назначьте цену, загрузите аватар и фото
+                жилья. Придумайте интересное описание. Оно сделает объявление более живым и привлекательным.
+                Получившееся
+                объявление должно давать гостям полное представление о вашем жилье.
+              </p>
             </div>
-            <div class="ad-form__field">
-              <input type="file" id="avatar" name="avatar" class="ad-form-header__input visually-hidden" accept="image/png, image/jpeg">
-              <label class="ad-form-header__drop-zone" for="avatar">Загрузить<br>фото...</label>
-            </div>
-            <p class="ad-form-header__info">Заполните все обязательные поля, назначьте цену, загрузите аватар и фото
-              жилья. Придумайте интересное описание. Оно сделает объявление более живым и привлекательным. Получившееся
-              объявление должно давать гостям полное представление о вашем жилье.</p>
-          </div>
-        </fieldset>
-        <fieldset class="ad-form__element ad-form__element--wide">
+          </fieldset>
+          <!-- <fieldset class="ad-form__element ad-form__element--wide">
           <label class="ad-form__label" for="title">Заголовок объявления</label>
           <input id="title" name="title" type="text" placeholder="Милая, уютная квартирка в центре Токио" required minlength="30" maxlength="100">
-        </fieldset>
-        <fieldset class="ad-form__element ad-form__element--wide">
+        </fieldset> -->
+          <!-- <fieldset class="ad-form__element ad-form__element--wide">
           <label class="ad-form__label" for="address">Адрес (координаты)</label>
           <input id="address" name="address" type="text" readonly="readonly">
-        </fieldset>
-        <fieldset class="ad-form__element">
+        </fieldset> -->
+          <!-- <fieldset class="ad-form__element">
           <label class="ad-form__label" for="type">Тип жилья</label>
           <select id="type" name="type">
             <option value="bungalow">Бунгало</option>
@@ -108,12 +119,12 @@
             <option value="house">Дом</option>
             <option value="palace">Дворец</option>
           </select>
-        </fieldset>
-        <fieldset class="ad-form__element">
+        </fieldset> -->
+          <!-- <fieldset class="ad-form__element">
           <label class="ad-form__label" for="price">Цена за ночь, руб.</label>
           <input id="price" name="price" type="number" placeholder="5000" required max="1000000">
-        </fieldset>
-        <fieldset class="ad-form__element ad-form__element--time">
+        </fieldset> -->
+          <!-- <fieldset class="ad-form__element ad-form__element--time">
           <label class="ad-form__label" for="timein">Время заезда и выезда</label>
           <select id="timein" name="timein">
             <option value="12:00" selected>После 12</option>
@@ -125,8 +136,8 @@
             <option value="13:00">Выезд до 13</option>
             <option value="14:00">Выезд до 14</option>
           </select>
-        </fieldset>
-        <fieldset class="ad-form__element">
+        </fieldset> -->
+          <!-- <fieldset class="ad-form__element">
           <label class="ad-form__label" for="room_number">Количество комнат</label>
           <select id="room_number" name="rooms">
             <option value="1" selected>1 комната</option>
@@ -134,8 +145,8 @@
             <option value="3" >3 комнаты</option>
             <option value="100" >100 комнат</option>
           </select>
-        </fieldset>
-        <fieldset class="ad-form__element">
+        </fieldset> -->
+          <!-- <fieldset class="ad-form__element">
           <label class="ad-form__label" for="capacity">Количество мест</label>
           <select id="capacity" name="capacity">
             <option value="3" selected>для 3 гостей</option>
@@ -143,8 +154,8 @@
             <option value="1">для 1 гостя</option>
             <option value="0">не для гостей</option>
           </select>
-        </fieldset>
-        <fieldset class="ad-form__element ad-form__element--wide features">
+        </fieldset> -->
+          <!-- <fieldset class="ad-form__element ad-form__element--wide features">
           <legend>Удобства: Wi-Fi, кухня, парковка, стиралка, лифт, кондиционер</legend>
           <input type="checkbox" name="features" value="wifi" id="feature-wifi"
             class="feature__checkbox visually-hidden">
@@ -164,13 +175,13 @@
           <input type="checkbox" name="features" value="conditioner" id="feature-conditioner"
             class="feature__checkbox visually-hidden">
           <label class="feature feature--conditioner" for="feature-conditioner">Кондиционер</label>
-        </fieldset>
-        <fieldset class="ad-form__element ad-form__element--wide">
+        </fieldset> -->
+          <!-- <fieldset class="ad-form__element ad-form__element--wide">
           <label class="ad-form__label" for="description">Описание (не обязательно)</label>
           <textarea id="description" name="description"
             placeholder="Здесь расскажите о том, какое ваше жилье замечательное и вообще"></textarea>
-        </fieldset>
-        <fieldset class="ad-form__element ad-form__element--wide">
+        </fieldset> -->
+          <!-- <fieldset class="ad-form__element ad-form__element--wide">
           <label class="ad-form__label">Фотография жилья</label>
           <div class="ad-form__photo-container">
             <div class="ad-form__upload">
@@ -179,31 +190,34 @@
             </div>
             <div class="ad-form__photo"></div>
           </div>
-        </fieldset>
-        <fieldset class="ad-form__element ad-form__element--submit">
+        </fieldset> -->
+          <!-- <fieldset class="ad-form__element ad-form__element--submit">
           <button class="ad-form__submit" type="submit">Опубликовать</button>
           или <button class="ad-form__reset" type="reset">очистить</button>
-        </fieldset>
-      </form>
+        </fieldset> -->
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer class="footer container">
-    <div class="footer__copyright copyright">
-      <a class="copyright__link copyright__link--image" href="https://htmlacademy.ru/intensive/javascript">
-        <img src="img/htmla-logo.svg" width="130" height="45" alt="HTML Academy" class="copyright__logo">
-      </a>
-      <p>Сделано в <a class="copyright__link copyright__link--text"
-          href="https://htmlacademy.ru/intensive/javascript">HTMLAcademy</a></p>
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__copyright copyright">
+        <a class="copyright__link copyright__link--image" href="https://htmlacademy.ru/intensive/javascript">
+          <img src="img/htmla-logo.svg" width="130" height="45" alt="HTML Academy" class="copyright__logo">
+        </a>
+        <p>Сделано в <a class="copyright__link copyright__link--text"
+            href="https://htmlacademy.ru/intensive/javascript">HTMLAcademy</a></p>
+      </div>
+      <ul class="footer__contacts contacts">
+        <li><a href="https://twitter.com/htmlacademy_ru" class="contacts__link contacts__link--twitter">Twitter</a></li>
+        <li><a href="https://www.instagram.com/htmlacademy/"
+            class="contacts__link contacts__link--instagram">Instagtam</a></li>
+        <li><a href="https://www.facebook.com/htmlacademy" class="contacts__link contacts__link--facebook">Facebook</a>
+        </li>
+        <li><a href="https://vk.com/htmlacademy" class="contacts__link contacts__link--vk">VK</a></li>
+      </ul>
     </div>
-    <ul class="footer__contacts contacts">
-      <li><a href="https://twitter.com/htmlacademy_ru" class="contacts__link contacts__link--twitter">Twitter</a></li>
-      <li><a href="https://www.instagram.com/htmlacademy/"
-          class="contacts__link contacts__link--instagram">Instagtam</a></li>
-      <li><a href="https://www.facebook.com/htmlacademy" class="contacts__link contacts__link--facebook">Facebook</a>
-      </li>
-      <li><a href="https://vk.com/htmlacademy" class="contacts__link contacts__link--vk">VK</a></li>
-    </ul>
   </footer>
 
   <!-- Карточка объявления -->
@@ -251,4 +265,3 @@
 </body>
 
 </html>
-
