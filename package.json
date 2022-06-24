@@ -1,0 +1,53 @@
+{
+  "name": "keksobooking",
+  "version": "22.0.0",
+  "private": true,
+  "description": "Личный проект «Keksobooking» от HTML Academy",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ChipRose/Keksobooking.git"
+  },
+  "devDependencies": {
+    "@babel/core": "7.17.5",
+    "@babel/preset-env": "7.16.11",
+    "autoprefixer": "10.4.2",
+    "babel-loader": "8.2.3",
+    "browser-sync": "2.26.14",
+    "clean-webpack-plugin": "4.0.0",
+    "copy-webpack-plugin": "10.2.4",
+    "cross-env": "7.0.3",
+    "css-loader": "6.7.1",
+    "css-minimizer-webpack-plugin": "3.4.1",
+    "eslint": "7.18.0",
+    "eslint-config-htmlacademy": "2.0.0",
+    "file-loader": "6.2.0",
+    "html-minimizer-webpack-plugin": "3.5.0",
+    "html-webpack-plugin": "5.5.0",
+    "image-minimizer-webpack-plugin": "3.2.3",
+    "imagemin": "8.0.1",
+    "imagemin-gifsicle": "7.0.0",
+    "imagemin-jpegtran": "7.0.0",
+    "imagemin-optipng": "8.0.0",
+    "imagemin-svgo": "10.0.1",
+    "mini-css-extract-plugin": "2.6.0",
+    "normalize.css": "8.0.1",
+    "optimize-css-assets-webpack-plugin": "4.0.0",
+    "terser-webpack-plugin": "5.3.1",
+    "webpack": "5.70.0",
+    "webpack-cli": "4.9.2",
+    "webpack-dev-server": "4.7.4"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "leaflet": "1.7.1",
+    "lodash-es": "4.17.21"
+  },
+  "scripts": {
+    "test": "eslint \"source/**/*.js\"",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "start": "cross-env NODE_ENV=development webpack serve --mode development"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
