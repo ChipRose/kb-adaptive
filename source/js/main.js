@@ -3,7 +3,7 @@ import './images-preview.js';
 import './../css/style.css';
 import './sprite.js';
 
-import { setUsualMarkers, setInitialMapState } from './map.js';
+import { setUsualMarkers, setInitialMapState, setStateOnResize, setMapDefault } from './map.js';
 import { getData } from './api.js';
 import { setSuccessState, setErrorState, showAllertMessage } from './util/util-message.js';
 import { setPromoFormSubmit, clearForm, sendPromoForm, setInitialFormState } from './form.js';
@@ -24,4 +24,5 @@ getData(
 );
 
 setPromoFormSubmit(sendPromoForm(setSuccessState, setErrorState));
+setStateOnResize(setMapDefault());
 clearForm(setInitialFormState, setInitialFilterState, setInitialMapState);

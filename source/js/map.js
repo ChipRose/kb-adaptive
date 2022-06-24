@@ -2,7 +2,7 @@ import { mapLib } from './libraries.js';
 import { promoRender } from './similar-promos.js';
 import { setAddress, clearForm, setPromoFormSubmit } from './form.js';
 import { setMapFilter, compareCallBack } from './filter-form.js';
-import { setInactiveFilterState, setActiveFilterState, setInactiveOfferFormState, setActiveOfferFormState} from './page-state.js';
+import { setInactiveFilterState, setActiveFilterState, setInactiveOfferFormState, setActiveOfferFormState } from './page-state.js';
 
 const OBJECT_QUANTITY = 10;
 
@@ -90,7 +90,7 @@ const setUsualMarkers = (similarPromos) => {
     .sort(compareCallBack())
     .slice(0, OBJECT_QUANTITY)
     .forEach((promo) => {
-      const {lat, lng} = promo.location;
+      const { lat, lng } = promo.location;
 
       const usualMarker = mapLib.marker(
         {
@@ -136,4 +136,10 @@ mainMarker.on('move', (evt) => {
   setAddress(evt.target.getLatLng().lat, evt.target.getLatLng().lng);
 });
 
-export { setUsualMarkers, setInitialMapState, setMapDefault };
+const setStateOnResize = (cb) => {
+  window.addEventListener('resize', () => {
+    cb();
+  });
+};
+
+export { setUsualMarkers, setInitialMapState, setMapDefault, setStateOnResize };
