@@ -17,13 +17,13 @@
       <img src="img/keksobooking.svg" alt="Keksobooking. Кексы по соседству" width="215" height="45">
     </div>
 
-    <!-- Карта объявлений -->
+    <!-- Map -->
     <section class="map">
 
-      <!-- Блок для вставки карты -->
+      <!-- Map canvas -->
       <div class="map__canvas" id="map-canvas"></div>
 
-      <!-- Фильтрация объявлений -->
+      <!-- Map filter -->
       <div class="map__filters-container">
         <div class="container">
           <form action="#" class="map__filters" autocomplete="off">
@@ -55,29 +55,53 @@
             <fieldset id="housing-features" class="map__features map__item">
               <input type="checkbox" name="features" value="wifi" id="filter-wifi"
                 class="map__checkbox visually-hidden">
-              <label class="map__feature map__feature--wifi" for="filter-wifi">Wi-Fi</label>
+              <label class="map__feature" for="filter-wifi">
+                <svg class="map__feature-icon" width="23" role="img" aria-label="Wi-Fi" focusable="false">
+                  <use xlink:href="img/sprite.svg#wifi-icon"></use>
+                </svg>
+              </label>
               <input type="checkbox" name="features" value="dishwasher" id="filter-dishwasher"
                 class="map__checkbox visually-hidden">
-              <label class="map__feature map__feature--dishwasher" for="filter-dishwasher">Посудомоечная машина</label>
+              <label class="map__feature" for="filter-dishwasher">
+                <svg class="map__feature-icon" width="23" role="img" aria-label="Dishwasher" focusable="false">
+                  <use xlink:href="img/sprite.svg#dish-icon"></use>
+                </svg>
+              </label>
               <input type="checkbox" name="features" value="parking" id="filter-parking"
                 class="map__checkbox visually-hidden">
-              <label class="map__feature map__feature--parking" for="filter-parking">Парковка</label>
+              <label class="map__feature map__feature--parking" for="filter-parking">
+                <svg class="map__feature-icon" width="23" role="img" aria-label="Parking" focusable="false">
+                  <use xlink:href="img/sprite.svg#parking-icon"></use>
+                </svg>
+              </label>
               <input type="checkbox" name="features" value="washer" id="filter-washer"
                 class="map__checkbox visually-hidden">
-              <label class="map__feature map__feature--washer" for="filter-washer">Стиральная машина</label>
+              <label class="map__feature" for="filter-washer">
+                <svg class="map__feature-icon" width="23" role="img" aria-label="Washing mashine" focusable="false">
+                  <use xlink:href="img/sprite.svg#washing-icon"></use>
+                </svg>
+              </label>
               <input type="checkbox" name="features" value="elevator" id="filter-elevator"
                 class="map__checkbox visually-hidden">
-              <label class="map__feature map__feature--elevator" for="filter-elevator">Лифт</label>
+              <label class="map__feature" for="filter-elevator">
+                <svg class="map__feature-icon" width="23" role="img" aria-label="Elevator" focusable="false">
+                  <use xlink:href="img/sprite.svg#elevator-icon"></use>
+                </svg>
+              </label>
               <input type="checkbox" name="features" value="conditioner" id="filter-conditioner"
                 class="map__checkbox visually-hidden">
-              <label class="map__feature map__feature--conditioner" for="filter-conditioner">Кондиционер</label>
+              <label class="map__feature" for="filter-conditioner">
+                <svg class="map__feature-icon" width="23" role="img" aria-label="Conditioner" focusable="false">
+                  <use xlink:href="img/sprite.svg#conditioner-icon"></use>
+                </svg>
+              </label>
             </fieldset>
           </form>
         </div>
       </div>
     </section>
 
-    <!-- Форма объявления -->
+    <!-- Promo form -->
     <section class="notice">
       <div class="container notice__container">
         <h2 class="notice__title">Ваше объявление</h2>
@@ -161,22 +185,46 @@
             <div class="ad-form__features-wrapper">
               <input type="checkbox" name="features" value="wifi" id="feature-wifi"
                 class="feature__checkbox visually-hidden">
-              <label class="feature feature--wifi" for="feature-wifi">Wi-Fi</label>
+              <label class="feature" for="feature-wifi">
+                <svg class="feature__icon" width="29" height="22" role="img" aria-label="Wi-Fi" focusable="false">
+                  <use xlink:href="img/sprite.svg#wifi-icon"></use>
+                </svg>
+              </label>
               <input type="checkbox" name="features" value="dishwasher" id="feature-dishwasher"
                 class="feature__checkbox visually-hidden">
-              <label class="feature feature--dishwasher" for="feature-dishwasher">Посудомоечная машина</label>
+              <label class="feature" for="feature-dishwasher">
+                <svg class="feature__icon" width="34" height="23" role="img" aria-label="Dishwasher" focusable="false">
+                  <use xlink:href="img/sprite.svg#dish-icon"></use>
+                </svg>
+              </label>
               <input type="checkbox" name="features" value="parking" id="feature-parking"
                 class="feature__checkbox visually-hidden">
-              <label class="feature feature--parking" for="feature-parking">Парковка</label>
+              <label class="feature" for="feature-parking">
+                <svg class="feature__icon" width="28" height="28" role="img" aria-label="Parking" focusable="false">
+                  <use xlink:href="img/sprite.svg#parking-icon"></use>
+                </svg>
+              </label>
               <input type="checkbox" name="features" value="washer" id="feature-washer"
                 class="feature__checkbox visually-hidden">
-              <label class="feature feature--washer" for="feature-washer">Стиральная машина</label>
+              <label class="feature" for="feature-washer">
+                <svg class="feature__icon" width="24" height="26" role="img" aria-label="Washer" focusable="false">
+                  <use xlink:href="img/sprite.svg#washing-icon"></use>
+                </svg>
+              </label>
               <input type="checkbox" name="features" value="elevator" id="feature-elevator"
                 class="feature__checkbox visually-hidden">
-              <label class="feature feature--elevator" for="feature-elevator">Лифт</label>
+              <label class="feature" for="feature-elevator">
+                <svg class="feature__icon" width="26" height="26" role="img" aria-label="Elevator" focusable="false">
+                  <use xlink:href="img/sprite.svg#elevator-icon"></use>
+                </svg>
+              </label>
               <input type="checkbox" name="features" value="conditioner" id="feature-conditioner"
                 class="feature__checkbox visually-hidden">
-              <label class="feature feature--conditioner" for="feature-conditioner">Кондиционер</label>
+              <label class="feature" for="feature-conditioner">
+                <svg class="feature__icon" width="34" height="23" role="img" aria-label="Conditioner" focusable="false">
+                  <use xlink:href="img/sprite.svg#conditioner-icon"></use>
+                </svg>
+              </label>
             </div>
           </fieldset>
           <fieldset class="ad-form__element ad-form__element--wide">
@@ -247,7 +295,7 @@
     </div>
   </footer>
 
-  <!-- Карточка объявления -->
+  <!-- Promo card -->
   <template id="card">
     <article class="popup">
       <img src="img/avatars/user01.png" class="popup__avatar" width="70" height="70" alt="Аватар пользователя">
@@ -273,14 +321,14 @@
     </article>
   </template>
 
-  <!-- Сообщение об успешном создании объявления -->
+  <!-- Success alert -->
   <template id="success">
     <div class="success">
       <p class="success__message">Ваше объявление<br>успешно размещено!</p>
     </div>
   </template>
 
-  <!-- Сообщение об ошибке создания объявления -->
+  <!-- Error allert -->
   <template id="error">
     <div class="error">
       <p class="error__message">Ошибка размещения объявления</p>
