@@ -139,7 +139,7 @@ mainMarker.on('move', (evt) => {
 const setStateOnResize = (cb) => {
   window.addEventListener('resize', () => {
     cb();
-  });
+  }); 
 };
 
 export { setUsualMarkers, setInitialMapState, setMapDefault, setStateOnResize };

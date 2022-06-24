@@ -92,12 +92,6 @@ fieldset {
   background-color: #dddddd;
 }
 
-@media (max-width:768px) {
-  .map__canvas {
-    height: 300px;
-  }
-}
-
 /* ===Promo filters=== */
 
 .map__filters-container {
