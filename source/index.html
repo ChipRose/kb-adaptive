@@ -158,24 +158,26 @@
           </fieldset>
           <fieldset class="ad-form__element ad-form__element--wide features">
             <legend>Удобства: Wi-Fi, кухня, парковка, стиралка, лифт, кондиционер</legend>
-            <input type="checkbox" name="features" value="wifi" id="feature-wifi"
-              class="feature__checkbox visually-hidden">
-            <label class="feature feature--wifi" for="feature-wifi">Wi-Fi</label>
-            <input type="checkbox" name="features" value="dishwasher" id="feature-dishwasher"
-              class="feature__checkbox visually-hidden">
-            <label class="feature feature--dishwasher" for="feature-dishwasher">Посудомоечная машина</label>
-            <input type="checkbox" name="features" value="parking" id="feature-parking"
-              class="feature__checkbox visually-hidden">
-            <label class="feature feature--parking" for="feature-parking">Парковка</label>
-            <input type="checkbox" name="features" value="washer" id="feature-washer"
-              class="feature__checkbox visually-hidden">
-            <label class="feature feature--washer" for="feature-washer">Стиральная машина</label>
-            <input type="checkbox" name="features" value="elevator" id="feature-elevator"
-              class="feature__checkbox visually-hidden">
-            <label class="feature feature--elevator" for="feature-elevator">Лифт</label>
-            <input type="checkbox" name="features" value="conditioner" id="feature-conditioner"
-              class="feature__checkbox visually-hidden">
-            <label class="feature feature--conditioner" for="feature-conditioner">Кондиционер</label>
+            <div class="ad-form__features-wrapper">
+              <input type="checkbox" name="features" value="wifi" id="feature-wifi"
+                class="feature__checkbox visually-hidden">
+              <label class="feature feature--wifi" for="feature-wifi">Wi-Fi</label>
+              <input type="checkbox" name="features" value="dishwasher" id="feature-dishwasher"
+                class="feature__checkbox visually-hidden">
+              <label class="feature feature--dishwasher" for="feature-dishwasher">Посудомоечная машина</label>
+              <input type="checkbox" name="features" value="parking" id="feature-parking"
+                class="feature__checkbox visually-hidden">
+              <label class="feature feature--parking" for="feature-parking">Парковка</label>
+              <input type="checkbox" name="features" value="washer" id="feature-washer"
+                class="feature__checkbox visually-hidden">
+              <label class="feature feature--washer" for="feature-washer">Стиральная машина</label>
+              <input type="checkbox" name="features" value="elevator" id="feature-elevator"
+                class="feature__checkbox visually-hidden">
+              <label class="feature feature--elevator" for="feature-elevator">Лифт</label>
+              <input type="checkbox" name="features" value="conditioner" id="feature-conditioner"
+                class="feature__checkbox visually-hidden">
+              <label class="feature feature--conditioner" for="feature-conditioner">Кондиционер</label>
+            </div>
           </fieldset>
           <fieldset class="ad-form__element ad-form__element--wide">
             <label class="ad-form__label" for="description">Описание (не обязательно)</label>
@@ -195,7 +197,7 @@
           </fieldset>
           <fieldset class="ad-form__element ad-form__element--submit">
             <button class="ad-form__submit" type="submit">Опубликовать</button>
-            или <button class="ad-form__reset" type="reset">очистить</button>
+            <span class="ad-form__reset-block">или <button class="ad-form__reset" type="reset">очистить</button></span>
           </fieldset>
         </form>
       </div>
@@ -212,12 +214,35 @@
             href="https://htmlacademy.ru/intensive/javascript">HTMLAcademy</a></p>
       </div>
       <ul class="footer__contacts contacts">
-        <li><a href="https://twitter.com/htmlacademy_ru" class="contacts__link contacts__link--twitter">Twitter</a></li>
-        <li><a href="https://www.instagram.com/htmlacademy/"
-            class="contacts__link contacts__link--instagram">Instagtam</a></li>
-        <li><a href="https://www.facebook.com/htmlacademy" class="contacts__link contacts__link--facebook">Facebook</a>
+        <li>
+          <a href="https://twitter.com/htmlacademy_ru" class="contacts__link contacts__link--twitter">
+            <svg class="contacts__icon" width="17" height="14" role="img" aria-label="Twitter" focusable="false">
+              <use xlink:href="img/sprite.svg#tw-icon"></use>
+            </svg>
+          </a>
         </li>
-        <li><a href="https://vk.com/htmlacademy" class="contacts__link contacts__link--vk">VK</a></li>
+        <li>
+          <a href="https://www.instagram.com/htmlacademy/"
+            class="contacts__link contacts__link--instagram">
+            <svg class="contacts__icon" width="15" height="15" role="img" aria-label="Instagram" focusable="false">
+              <use xlink:href="img/sprite.svg#inst-icon"></use>
+            </svg>
+          </a>
+          </li>
+        <li>
+          <a href="https://www.facebook.com/htmlacademy" class="contacts__link contacts__link--facebook">
+            <svg class="contacts__icon" width="9" height="18" role="img" aria-label="Instagram" focusable="false">
+              <use xlink:href="img/sprite.svg#fb-icon"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://vk.com/htmlacademy" class="contacts__link contacts__link--vk">
+            <svg class="contacts__icon" width="11" height="14" role="img" aria-label="Instagram" focusable="false">
+              <use xlink:href="img/sprite.svg#vk-icon"></use>
+            </svg>
+        </a>
+      </li>
       </ul>
     </div>
   </footer>

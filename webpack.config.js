@@ -8,6 +8,7 @@ const HtmlMinimizerPlugin = require('html-minimizer-webpack-plugin');
 const OptimizeSccAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 
 const CopyPlugin = require('copy-webpack-plugin');
 
@@ -46,6 +47,9 @@ const plugins = () => {
   const basePlugins = [
     new MiniCssExtractPlugin({
       filename: 'css/style.min.css'
+    }),
+    new SpriteLoaderPlugin({
+      plainSprite: true,
     }),
     new CopyPlugin({
       patterns: [
@@ -97,6 +101,20 @@ module.exports = {
       {
         test: /\.(jpeg|jpg|png|gif|svg)$/i,
         type: 'asset',
+      },
+      {
+        //Sprite
+        test: /\.svg$/,
+        include: path.resolve(__dirname, 'source/img/icons'),
+        use: [
+          {
+            loader: 'svg-sprite-loader',
+            options: {
+              extract: true,
+              spriteFilename: './img/sprite.svg',
+            }
+          },
+        ],
       },
       {
         //JS

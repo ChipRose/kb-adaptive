@@ -1,6 +1,7 @@
 import './images-preview.js';
 
 import './../css/style.css';
+import './sprite.js';
 
 import { setUsualMarkers, setInitialMapState } from './map.js';
 import { getData } from './api.js';
