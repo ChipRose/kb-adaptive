@@ -77,33 +77,28 @@ fieldset {
 .map {
   position: relative;
   z-index: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
+
   display: flex;
-  -webkit-box-align: end;
-  -ms-flex-align: end;
   align-items: flex-end;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 
   overflow: hidden;
 }
 
 .map__canvas {
+  overflow: hidden;
   width: 100%;
   height: 500px;
   background-color: #dddddd;
 }
 
-.map-inner {
-  margin: 0 auto;
+@media (max-width:768px) {
+  .map__canvas {
+    height: 300px;
+  }
 }
 
-/**
- * Фильтры объявления
- */
+/* ===Promo filters=== */
 
 .map__filters-container {
   width: 100%;
@@ -115,19 +110,12 @@ fieldset {
 
 .map__filters {
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
+
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   flex-wrap: wrap;
 
-  -webkit-transition: opacity 300ms ease-in;
-  -o-transition: opacity 300ms ease-in;
   transition: opacity 300ms ease-in;
 
   opacity: 1;
@@ -361,7 +349,7 @@ fieldset {
 
 @media (max-width: 768px) {
   .ad-form__element {
-    margin:0;
+    margin: 0;
     flex-basis: 100%;
     justify-content: center;
   }
@@ -467,7 +455,7 @@ fieldset {
   flex-wrap: wrap;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .ad-form__features-wrapper {
     margin: -3px -3px 17px;
 
@@ -498,7 +486,7 @@ fieldset {
   cursor: pointer;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .feature {
     padding: 3px;
     width: 40px;
@@ -513,7 +501,7 @@ fieldset {
   fill: #343434;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .feature__icon {
     width: auto;
     max-width: 25px;
@@ -593,7 +581,7 @@ fieldset {
   min-height: 70px;
 }
 
-@media (max-width:768px){
+@media (max-width: 768px) {
   .ad-form__upload {
     width: auto;
     flex: 1 1 auto;
@@ -646,7 +634,7 @@ fieldset {
   border-radius: 5px;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .ad-form__photo {
     margin-right: 0px;
   }
@@ -660,7 +648,7 @@ fieldset {
   text-align: center;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .ad-form__element--submit {
     display: flex;
     align-items: center;
@@ -668,7 +656,6 @@ fieldset {
     flex-wrap: wrap;
   }
 }
-
 
 .ad-form__submit {
   font-size: 22px;
@@ -685,7 +672,7 @@ fieldset {
   border-radius: 8px;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .ad-form__submit {
     margin-bottom: 20px;
   }
@@ -750,14 +737,14 @@ fieldset {
   flex-wrap: wrap;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .footer__container {
     align-items: center;
     flex-direction: column;
   }
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .footer__copyright {
     margin-bottom: 20px;
   }
@@ -767,7 +754,7 @@ fieldset {
   font-size: 12px;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .copyright {
     width: 100%;
 
@@ -777,7 +764,7 @@ fieldset {
   }
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .copyright__link {
     order: 1;
   }
@@ -821,10 +808,10 @@ fieldset {
   max-width: 15px;
   max-height: 15px;
 
-  fill:#ffffff;
+  fill: #ffffff;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .contacts__icon {
     max-width: 30px;
     max-height: 30px;
@@ -848,12 +835,12 @@ fieldset {
   cursor: pointer;
 }
 
-.contacts__link:hover, 
-.contacts__link:focus  {
-  background:#ff6547;
+.contacts__link:hover,
+.contacts__link:focus {
+  background: #ff6547;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .contacts__link {
     width: 45px;
     height: 45px;
@@ -953,6 +940,13 @@ fieldset {
 
 .popup__text--capacity {
   margin-bottom: 0;
+}
+
+.popup__features {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .popup__features {
